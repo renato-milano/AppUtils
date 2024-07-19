@@ -3,7 +3,7 @@ import { StatusBar } from 'expo-status-bar'
 import {Slot} from 'expo-router'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import { Link } from 'expo-router'
-import {iglm, profile} from "../constants/images"
+import {images} from "../constants"
 
 const RootLayout = () => {
   return (
@@ -12,16 +12,9 @@ const RootLayout = () => {
     className="flex-1 items-center justify-center gap-5" 
     style={{backgroundColor:'#324aa8'}}>
     
-      <Text 
-      className="text-3xl primary"
-      style={{color:'white'}}
-      >Logistica Utils 4.0</Text>
-      <Image source={require("../assets/images/LOGO-IGLM.jpg")}
-      className="w-[200px] h-[84px]"
-      resizeMode='contain'
-      ></Image>
+      <Image source={images.iglm}></Image>
       <StatusBar style='auto'></StatusBar>
-      <Link href='/home' className="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded" style={{color:'white'}}>Accedi</Link>
+      <Link href='/sign-in' className="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded" style={{color:'white'}}>Accedi</Link>
       <Text 
       className="text-xs primary"
       style={{color:'white'}}

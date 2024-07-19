@@ -27,9 +27,9 @@ screenOptions={{
     tabBarActiveTintColor: 'white',
     tabBarInactiveTintColor: '#CDCDE0',
     tabBarStyle:{
-        backgroundColor: '#3333ff',
+        backgroundColor: '#324aa8',
         borderTopWidth: 1,
-        borderTopColor: '#3333ff',
+        borderTopColor: '#324aa8',
         height:70
     }
 }
