@@ -1,12 +1,19 @@
 import {  Text, View, Image, StyleSheet } from 'react-native'
 import { StatusBar } from 'expo-status-bar'
-import {Slot} from 'expo-router'
+import {Redirect, Slot} from 'expo-router'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import { Link } from 'expo-router'
 import {images} from "../constants"
+import { useGlobalContext } from '../context/GlobalProvider'
 
 const RootLayout = () => {
-  return (
+  const {isLoading,isLogged}= useGlobalContext()
+
+  if(!isLoading && isLogged){ 
+    console.log("logged"); 
+    return <Redirect href="/home"></Redirect>;
+  }
+    return (
     <SafeAreaView className="h-full" style={{backgroundColor:'#324aa8'}}>
     <View 
     className="flex-1 items-center justify-center gap-5" 

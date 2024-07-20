@@ -3,18 +3,34 @@ import React, { useState } from 'react'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import FormField from '../../components/FormField'
 import CustomButton from '../../components/CustomButton'
-import { Link } from 'expo-router'
+import { Link, router } from 'expo-router'
 
 import {images} from '../../constants'
+import { getCurrentUser, login } from '../../lib/appwrite'
+import { useGlobalContext } from '../../context/GlobalProvider'
 
 const SignIn = () => {
+    const { setUser, setLogged } = useGlobalContext();
     const [form, setForm] = useState({
         email:'',
         password:''
     })
-    const submit = ()=>{
+    const submit = async ()=>{
         
-        console.log("Funziona Porco di diocane")
+    if(!form.email || !form.password){
+        Alert.alert("Coglione","Non hai riempito tutti i campi...")
+      }
+      try {
+        await login(form.email,form.password);
+        const result = await getCurrentUser();
+        setUser(result);
+        setLogged(true);
+        console.log(result)
+        router.replace("/home")
+      } catch (error) {
+        console.log(error)
+      }
+  
 
     }
   return (
@@ -45,7 +61,7 @@ const SignIn = () => {
             containerStyles="mt-10"
             handlePress={submit}
         ></CustomButton>
-        <Text className="mt-5 font-psemibold text-semibold text-l text-white">Non hai un account? <Link href="/home">
+        <Text className="mt-5 font-psemibold text-semibold text-l text-white">Non hai un account? <Link href="/sign-up">
         <Text style={{color:'yellow'}}>Creane uno</Text></Link></Text>
             </View>
 

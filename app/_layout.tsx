@@ -1,7 +1,9 @@
 import { StyleSheet, Text, View } from 'react-native'
 import {Slot, SplashScreen, Stack} from 'expo-router'
 import { useFonts } from 'expo-font'
-import { useEffect } from 'react';
+import React, { useEffect } from 'react';
+import GlobalProvider from '../context/GlobalProvider'
+
 SplashScreen.preventAutoHideAsync();
 const RootLayout = () => {
   const [fontsLoaded, error] = useFonts({
@@ -25,6 +27,7 @@ useEffect(()=>{
 if(!fontsLoaded && !error) return null;
 
   return (
+    <GlobalProvider>
     <Stack>
 
       <Stack.Screen name='index' options={{ headerShown:false}}/>
@@ -32,6 +35,7 @@ if(!fontsLoaded && !error) return null;
       <Stack.Screen name='(tabs)' options={{ headerShown:false}}/>
       
     </Stack>
+    </GlobalProvider>
   )
 }
 
