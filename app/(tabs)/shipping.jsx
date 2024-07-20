@@ -3,10 +3,11 @@ import React, {useEffect, useState} from 'react'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import SearchInput from '../../components/SearchInput'
 import { RefreshControl } from 'react-native'
-import { getAllPosts } from '../../lib/appwrite'
+import { getAllShips } from '../../lib/appwrite'
 import NewsCard from '../../components/NewsCard'
+import ShipCard from '../../components/ShipCard'
 
-const home = () => {
+const shipping = () => {
 
   const [data, setData] = useState([])
   const [isLoading, setisLoading] = useState(true)
@@ -15,7 +16,7 @@ const home = () => {
     const fetchData = async () =>{
       setisLoading(true);
       try {
-        const response = await getAllPosts();
+        const response = await getAllShips();
         setData(response);
         
       } catch (error) {
@@ -40,11 +41,11 @@ const home = () => {
     data={data}
     keyExtractor={(item)=> item.$id}
     renderItem={({item})=>(
-      <NewsCard post={item}></NewsCard>
+      <ShipCard post={item}></ShipCard>
     )}
     ListHeaderComponent={()=>(
       <View className="">
-        <Text className="font-pregular text-2xl text-primary">Home Avvisi</Text>
+        <Text className="font-pregular text-2xl text-primary">Consegne</Text>
         <SearchInput
         placeholder="Cerca tra gli avvisi"/>
         <View className="w-full flex-1 pt-3 pb-5">
@@ -60,6 +61,6 @@ const home = () => {
   )
 }
 
-export default home
+export default shipping
 
 const styles = StyleSheet.create({})

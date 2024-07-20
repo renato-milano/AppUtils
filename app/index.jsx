@@ -5,10 +5,12 @@ import { SafeAreaView } from 'react-native-safe-area-context'
 import { Link } from 'expo-router'
 import {images} from "../constants"
 import { useGlobalContext } from '../context/GlobalProvider'
+import { getCurrentUser } from '../lib/appwrite'
 
 const RootLayout = () => {
   const {isLoading,isLogged}= useGlobalContext()
-
+  console.log(isLogged)
+  getCurrentUser();
   if(!isLoading && isLogged){ 
     console.log("logged"); 
     return <Redirect href="/home"></Redirect>;

@@ -68,6 +68,22 @@ screenOptions={{
 
     </Tabs.Screen>
     <Tabs.Screen 
+    name='shipping' 
+    options= {{
+        title:'Consegne',
+        headerShown: false,
+        tabBarIcon: ({ color, focused}) => (
+            <TabIcon
+            icon={icons.bookmark}
+            color={color}
+            name="Consegne"
+            focused={focused}
+            ></TabIcon>
+        )
+        }}>
+
+    </Tabs.Screen>
+    <Tabs.Screen 
     name='profile' 
     options= {{
         title:'Profilo',
@@ -83,6 +99,7 @@ screenOptions={{
         }}>
 
     </Tabs.Screen>
+   
 </Tabs>
 </>
   )

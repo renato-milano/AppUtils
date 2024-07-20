@@ -13,6 +13,7 @@ const GlobalProvider = ({children}) => {
     const [isLoading, setLoading] = useState(true);
 
     useEffect(() => {
+        console.log("using provider effects")
       getCurrentUser()
       .then((res)=>{
         if (res){
@@ -27,10 +28,7 @@ const GlobalProvider = ({children}) => {
       }).finally(()=>{
         setLoading(false);
       })
-    
-      return () => {
-        second
-      }
+
     }, [])
     
 
