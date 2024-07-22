@@ -17,7 +17,6 @@ const ShipCard = ({post}) => {
   
     }
   return (
-    <SafeAreaView className="flex-row justify-center items-center border-b-2 border-black-200">
     <TouchableOpacity 
     onPress={()=>{
       const id= post.$id;
@@ -26,6 +25,7 @@ const ShipCard = ({post}) => {
       router.setParams(id)
       router.push(lin)}
     }>
+    <SafeAreaView className="flex-row justify-center items-center border-b-2 border-black-200">
     <View className="w-[50px] h-[50px] rounded-lg">
     <Image source={{uri:post.users.avatar}} className="border-10 w-full h-full rounded-lg" resizeMode='cover'></Image>
     </View>
@@ -34,8 +34,9 @@ const ShipCard = ({post}) => {
       <Text className="font-pregular text-m">{getFormattedDate(post.dateShip)}</Text>
       <Text className="font-pregular text-xs">{post.users.username}</Text>
     </View>
-    </TouchableOpacity>
+    
     </SafeAreaView>
+    </TouchableOpacity>
   )
 }
 
