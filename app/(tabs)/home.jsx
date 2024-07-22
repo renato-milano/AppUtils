@@ -26,7 +26,6 @@ const home = () => {
     }
     fetchData();
   }, [])
-  console.log(data);
   const [refreshing, setRefreshing] = useState(false)
   const onRefresh = async () =>{
     setRefreshing(true);
