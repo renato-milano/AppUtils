@@ -27,10 +27,32 @@ const shipDetail = () => {
 
       if(!isLoading){
   return (
-    <SafeAreaView>
+    <SafeAreaView className="bg-gray-50">
     <View>
-      <Text className="text-xl">{ship.title}</Text>
-      <Text className="text-xl">{getFormattedDate(ship.dateShip)}</Text>
+      <Text className="font-pregular text-xl text-primary">Dettaglio Consegna</Text>
+      <View className="flex-row items-center">
+      <Text className="font-pregular text-l h-[8vh] w-[15vh] text-gray-50 bg-cyan-600 p-3">Descrizione</Text>
+      <Text className="font-pregular text-l h-[8vh] p-3 bg-sky-200 w-full">{ship.title}</Text>
+      </View>
+      <View className="flex-row items-center">
+      <Text className="font-pregular text-l h-[8vh] w-[15vh] text-gray-50 bg-cyan-600 p-3">Corriere</Text>
+      <Text className="font-pregular text-l h-[8vh] p-3 bg-sky-200 w-full">{ship.carrier}</Text>
+      </View>
+      <View className="flex-row items-center">
+      <Text className="font-pregular text-l h-[8vh] w-[15vh] text-gray-50 bg-cyan-600 p-3">Mittente </Text>
+      <Text className="font-pregular text-l h-[8vh] p-3 bg-sky-200 w-full">{ship.sender}</Text>
+      </View>
+      <View className="flex-row items-center">
+      <Text className="font-pregular text-l h-[8vh] w-[15vh] text-gray-50 bg-cyan-600 p-3">Arrivo Previsto </Text>
+      <Text className="font-pregular text-l h-[8vh] p-3 bg-sky-200 w-full">{getFormattedDate(ship.dateShip)}</Text>
+      </View>
+      {ship.arrived ?
+       <View>
+        <Text className="text-xl p-3 text-gray-50 text-center bg-lime-500">Consegnato</Text>
+       </View> 
+       : <View>
+        <Text className="text-xl p-3 text-gray-50 text-center bg-red-600">Non Consegnato</Text>
+      </View> }
     </View>
     </SafeAreaView>
   )
