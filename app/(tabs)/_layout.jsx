@@ -2,6 +2,7 @@ import { StyleSheet, Text, View, Image } from 'react-native'
 import React from 'react'
 import { Tabs, Redirect } from 'expo-router'
 import {icons} from '../../constants'
+import Banner from '../../components/Banner'
 
 const TabIcon= ({icon,color,name,focused}) =>{
     return(
@@ -20,6 +21,7 @@ const TabIcon= ({icon,color,name,focused}) =>{
 const TabsLayout = () => {
   return (
 <>
+<Banner></Banner>
 <Tabs
 screenOptions={{
     tabBarShowLabel: false,
@@ -92,7 +94,7 @@ screenOptions={{
             <TabIcon
             icon={icons.profile}
             color={color}
-            name="Profilo"
+            name="Logout"
             focused={focused}
             ></TabIcon>
         )

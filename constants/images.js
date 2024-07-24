@@ -6,6 +6,7 @@ import logo from "../assets/images/logo.png";
 import logoSmall from "../assets/images/logo-small.png";
 import empty from "../assets/images/empty.png";
 import iglm from "../assets/images/LOGO-IGLM.jpg"
+import iglmlogo from "../assets/images/logo-iglm-icon.png"
 
 
-export default { profile, thumbnail, cards, path, logo, logoSmall, empty, iglm };
+export default { profile, thumbnail, cards, path, logo, logoSmall, empty, iglm, iglmlogo };

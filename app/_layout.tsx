@@ -2,7 +2,9 @@ import { StyleSheet, Text, View } from 'react-native'
 import {Slot, SplashScreen, Stack} from 'expo-router'
 import { useFonts } from 'expo-font'
 import React, { useEffect } from 'react';
+import { SafeAreaView } from 'react-native-safe-area-context';
 import GlobalProvider from '../context/GlobalProvider'
+import Banner from '../components/Banner'
 
 SplashScreen.preventAutoHideAsync();
 const RootLayout = () => {
@@ -27,12 +29,13 @@ useEffect(()=>{
 if(!fontsLoaded && !error) return null;
 
   return (
-    <GlobalProvider>
+    <GlobalProvider >
     <Stack>
 
       <Stack.Screen name='index' options={{ headerShown:false}}/>
       <Stack.Screen name='(auth)' options={{ headerShown:false}}/>
       <Stack.Screen name='(tabs)' options={{ headerShown:false}}/>
+      <Stack.Screen name='ship/[id]' options={{ headerShown:false}}/>
       
     </Stack>
     </GlobalProvider>

@@ -23,7 +23,7 @@ const RootLayout = () => {
     
       <Image source={images.iglm}></Image>
       <StatusBar style='auto'></StatusBar>
-      <Link href='/sign-in' className="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded" style={{color:'white'}}>Accedi</Link>
+      <Link href='/sign-in' className="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded" style={{color:'white'}}>Entra</Link>
       <Text 
       className="text-xs primary"
       style={{color:'white'}}

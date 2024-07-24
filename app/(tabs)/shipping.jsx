@@ -35,7 +35,7 @@ const shipping = () => {
     setRefreshing(false);
   }
   return (
-    <SafeAreaView className="p-2">
+    <SafeAreaView className="px-1 bg-white h-full">
       
     <FlatList 
     data={data}
@@ -49,7 +49,7 @@ const shipping = () => {
         <SearchInput
         placeholder="Cerca tra gli avvisi"/>
         <View className="w-full flex-1 pt-3 pb-5">
-          <Text className="font-pregular text-l text-primary" >Avvisi Recenti</Text>
+          <Text className="font-pregular text-l text-primary" >Consegne Recenti</Text>
         </View>
       </View>
     )}

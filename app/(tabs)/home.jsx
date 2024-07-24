@@ -33,7 +33,7 @@ const home = () => {
     setRefreshing(false);
   }
   return (
-    <SafeAreaView className="p-2">
+    <SafeAreaView className="p-2 bg-white h-full">
       
     <FlatList 
     data={data}
