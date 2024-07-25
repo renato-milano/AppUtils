@@ -30,7 +30,7 @@ const ShipCard = ({post}) => {
     <Image source={{uri:post.users.avatar}} className="border-10 w-full h-full rounded-lg" resizeMode='cover'></Image>
     </View>
     <View className="p-1 flex-1 ">
-      <Text className="font-pregular text-l">{post.title}</Text>
+      <Text className="font-pregular text-primary text-l">{post.title}</Text>
       <Text className="font-pregular text-m">{getFormattedDate(post.dateShip)}</Text>
       <Text className="font-pregular text-xs">{post.users.username}</Text>
     </View>

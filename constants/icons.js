@@ -11,9 +11,12 @@ import logout from "../assets/icons/logout.png";
 import eyeHide from "../assets/icons/eye-hide.png";
 import eye from "../assets/icons/eye.png";
 import play from "../assets/icons/play.png";
+import edit from "../assets/icons/edit.png";
+import loading from "../assets/icons/loading.png";
 
 export default {
   play,
+  edit,
   bookmark,
   home,
   plus,
@@ -26,4 +29,5 @@ export default {
   logout,
   eyeHide,
   eye,
+  loading,
 };

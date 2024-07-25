@@ -36,6 +36,7 @@ if(!fontsLoaded && !error) return null;
       <Stack.Screen name='(auth)' options={{ headerShown:false}}/>
       <Stack.Screen name='(tabs)' options={{ headerShown:false}}/>
       <Stack.Screen name='ship/[id]' options={{ headerShown:false}}/>
+      <Stack.Screen name='edit/[id]' options={{ headerShown:false}}/>
       
     </Stack>
     </GlobalProvider>

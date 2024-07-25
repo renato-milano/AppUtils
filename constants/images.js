@@ -9,4 +9,5 @@ import iglm from "../assets/images/LOGO-IGLM.jpg"
 import iglmlogo from "../assets/images/logo-iglm-icon.png"
 
 
+
 export default { profile, thumbnail, cards, path, logo, logoSmall, empty, iglm, iglmlogo };

@@ -35,7 +35,7 @@ const shipping = () => {
     setRefreshing(false);
   }
   return (
-    <SafeAreaView className="px-1 bg-white h-full">
+    <SafeAreaView className="px-2 bg-white h-full">
       
     <FlatList 
     data={data}
@@ -44,11 +44,11 @@ const shipping = () => {
       <ShipCard post={item}></ShipCard>
     )}
     ListHeaderComponent={()=>(
-      <View className="">
+      <View>
         <Text className="font-pregular text-2xl text-primary">Consegne</Text>
         <SearchInput
-        placeholder="Cerca tra gli avvisi"/>
-        <View className="w-full flex-1 pt-3 pb-5">
+        placeholder="Cerca tra le consegne..."/>
+        <View className="w-full flex-1">
           <Text className="font-pregular text-l text-primary" >Consegne Recenti</Text>
         </View>
       </View>

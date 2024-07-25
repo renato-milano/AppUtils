@@ -16,7 +16,7 @@ const Banner = () => {
     
   return (
     
-    <SafeAreaView className="p-2 bg-white">
+    <SafeAreaView className="px-2 bg-white">
         { !isLoading && isLogged ?
     <View className="items-center flex-row justify-between">
         <Image resizeMode="contain"

@@ -33,7 +33,7 @@ const home = () => {
     setRefreshing(false);
   }
   return (
-    <SafeAreaView className="p-2 bg-white h-full">
+    <SafeAreaView className="px-2 bg-white h-full">
       
     <FlatList 
     data={data}
@@ -42,11 +42,11 @@ const home = () => {
       <NewsCard post={item}></NewsCard>
     )}
     ListHeaderComponent={()=>(
-      <View className="">
+      <View>
         <Text className="font-pregular text-2xl text-primary">Home Avvisi</Text>
         <SearchInput
-        placeholder="Cerca tra gli avvisi"/>
-        <View className="w-full flex-1 pt-3 pb-5">
+        placeholder="Cerca tra gli avvisi..."/>
+        <View className="w-full flex-1 pb-1">
           <Text className="font-pregular text-l text-primary" >Avvisi Recenti</Text>
         </View>
       </View>
